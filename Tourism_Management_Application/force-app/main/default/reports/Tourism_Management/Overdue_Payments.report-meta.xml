@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_TOTAL</acrossGroupingContext>
+        <column>Invoice__c.Id</column>
+        <datatype>count</datatype>
+        <description>Total Overdue Invoices</description>
+        <isActive>true</isActive>
+        <name>RowCount</name>
+    </aggregates>
+    <blockInfo/>
+    <columns>
+        <field>Invoice__c.Id</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Invoice__c.Name</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Invoice__c.Amount__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Invoice__c.Payment_Overdue__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Invoice__c.Booking__r.Tourist__r.Email__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Invoice__c.CreatedDate</field>
+        <type>field</type>
+    </columns>
+    <description>Tabular report showing overdue invoices</description>
+    <filter>
+        <criteriaItems>
+            <column>Invoice__c.Payment_Overdue__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>true</value>
+        </criteriaItems>
+    </filter>
+    <format>TABULAR</format>
+    <name>Overdue Payments</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Invoice__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Invoice__c.CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

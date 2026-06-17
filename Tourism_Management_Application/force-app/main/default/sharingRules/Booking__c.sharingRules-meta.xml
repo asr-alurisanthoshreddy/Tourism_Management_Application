@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Travel_Agent_View_Confirmed_Bookings</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Allow Travel Agents to view all confirmed bookings owned by record owner</description>
+        <label>Travel Agent View Confirmed Bookings</label>
+        <sharedTo>
+            <groupName>Travel_Agents</groupName>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingCriteriaRules>
+        <fullName>Confirmed_Bookings_Criteria</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share confirmed booking records based on status criteria</description>
+        <label>Confirmed Bookings Criteria Rule</label>
+        <sharedTo>
+            <groupName>Travel_Agents</groupName>
+        </sharedTo>
+        <criteriaBasedRules>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Confirmed</value>
+        </criteriaBasedRules>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -13,4 +13,12 @@
     <enableRestrictAccessLookupRecords>false</enableRestrictAccessLookupRecords>
     <enableSecureGuestAccess>false</enableSecureGuestAccess>
     <enableStandardReportVisibility>true</enableStandardReportVisibility>
+    <orgWideDefaults>
+        <sobject>Booking__c</sobject>
+        <defaultAccessLevel>Private</defaultAccessLevel>
+    </orgWideDefaults>
+    <orgWideDefaults>
+        <sobject>Invoice__c</sobject>
+        <defaultAccessLevel>Private</defaultAccessLevel>
+    </orgWideDefaults>
 </SharingSettings>

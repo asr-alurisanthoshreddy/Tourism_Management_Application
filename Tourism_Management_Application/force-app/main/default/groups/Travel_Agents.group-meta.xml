@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Group for all Travel Agent users with Travel Agent Access permission set</description>
+    <doesIncludeBosses>false</doesIncludeBosses>
+    <email>travel-agents@tourism-management.com</email>
+    <label>Travel Agents</label>
+    <name>Travel_Agents</name>
+    <singleEmailMessageFilter/>
+</Group>

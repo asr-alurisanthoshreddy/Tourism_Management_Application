@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_TOTAL</acrossGroupingContext>
+        <column>Booking__c.Id</column>
+        <datatype>count</datatype>
+        <description>Total Bookings Count</description>
+        <isActive>true</isActive>
+        <name>RowCount</name>
+    </aggregates>
+    <blockInfo/>
+    <columns>
+        <field>Booking__c.Id</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Booking__c.Status__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Booking__c.Tourist__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Booking__c.Package__c</field>
+        <type>field</type>
+    </columns>
+    <columns>
+        <field>Booking__c.Total_Cost__c</field>
+        <type>field</type>
+    </columns>
+    <description>Summary report of bookings grouped by status</description>
+    <filter>
+        <criteriaItems/>
+    </filter>
+    <format>SUMMARY</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Booking__c.Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Bookings By Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Booking__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Booking__c.CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

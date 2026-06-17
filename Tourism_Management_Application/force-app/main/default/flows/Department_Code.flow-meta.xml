@@ -2,20 +2,12 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>64.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
-    <assignments>
-        <name>Assignment_1</name>
-        <label>Assignment 1</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>$Record.CreatedById</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$User.IsActive</elementReference>
-            </value>
-        </assignmentItems>
-    </assignments>
     <environments>Default</environments>
+    <formulas>
+        <name>DepartmentCode_Formula</name>
+        <dataType>String</dataType>
+        <expression>CONCATENATE(UPPER(LEFT($Record.Name, 3)), TEXT(ROUND(RAND() * 1000, 0)))</expression>
+    </formulas>
     <interviewLabel>Department_Code {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Department_Code</label>
     <processMetadataValues>
@@ -42,11 +34,11 @@
         <label>Update Records 1</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <connector>
-            <targetReference>Assignment_1</targetReference>
-        </connector>
         <inputAssignments>
             <field>Department_Code__c</field>
+            <value>
+                <elementReference>DepartmentCode_Formula</elementReference>
+            </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
